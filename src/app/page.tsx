@@ -1,16 +1,35 @@
-import Image from 'next/image';
+import Cover from './_components/cover/Cover';
+import Filter from './_components/filter/Filter';
+import AllQuests from './_components/quests/Quests';
 
-export default function Home() {
+async function questsFetch() {
+  const response = await fetch('http://localhost:3001/quests', {
+    method: 'GET',
+  });
+  if (!response.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return response.json();
+}
+
+export default async function Home() {
+  const data = await questsFetch();
+
   return (
-    <div className="flex min-h-screen flex-col gap-4 items-center  p-24">
-      <span className="font-bold text-3xl text-silver">Quest Room</span>
-      <Image
-        src="/logo.svg"
-        alt="Quest Room"
-        width={100}
-        height={24}
-        priority
-      />
-    </div>
+    <>
+      <Cover />
+      <div className="relative z-10 flex">
+        <div className="container mx-auto">
+          <span className="font-medium text-sm text-orange">Ігри у Львові</span>
+          <h1 className="font-extrabold text-[64px] text-white">
+            В яку гру зіграємо?
+          </h1>
+          <div className="flex flex-col items-start gap-y-16 mt-[50px]">
+            <Filter />
+            <AllQuests data={data} />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

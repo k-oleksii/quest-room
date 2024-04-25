@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Header from './_components/header/Header';
 import { raleway } from './fonts';
 import './globals.css';
 
@@ -16,7 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={raleway.className}>
-        <main>{children}</main>
+        <Header />
+        <main className="w-full py-12">{children}</main>
       </body>
     </html>
   );
