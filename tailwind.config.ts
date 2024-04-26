@@ -13,11 +13,13 @@ const config: Config = {
       lightGray: '#d9d9d9',
       silver: '#a6a6a6',
       silverGray: '#e6e6e6',
+      darkGray: '#535353',
       grayishSilver: '#c6c4c2',
       white: '#ffffff',
       charcoal: '#615e5c',
       black: '#000000',
       darkOlive: '#514321',
+      purple: '#8a43ff',
     },
     extend: {
       backgroundImage: theme => ({

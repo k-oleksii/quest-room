@@ -1,6 +1,7 @@
 import Cover from './_components/cover/Cover';
 import Filter from './_components/filter/Filter';
 import AllQuests from './_components/quests/Quests';
+import { FILTERS } from './_util/constants/filter';
 
 async function questsFetch() {
   const response = await fetch('http://localhost:3001/quests', {
@@ -25,7 +26,7 @@ export default async function Home() {
             В яку гру зіграємо?
           </h1>
           <div className="flex flex-col items-start gap-y-16 mt-[50px]">
-            <Filter />
+            <Filter data={FILTERS} />
             <AllQuests data={data} />
           </div>
         </div>

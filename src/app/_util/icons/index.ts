@@ -30,6 +30,7 @@ export const ICONS = {
   person: 'person',
   puzzle: 'puzzle',
   yb: 'yb',
+  tw: 'tw',
   inst: 'inst',
   sciFi: 'sciFi',
 };

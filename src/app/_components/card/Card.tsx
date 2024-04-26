@@ -1,16 +1,18 @@
 import { getIcon } from '@/app/_util/helper/getIcon';
 import { ICONS } from '@/app/_util/icons';
+import { IQuestCard } from '@/app/_util/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 
-const Card = props => {
+const Card: FC<IQuestCard> = props => {
   return (
-    <article className="min-h-[233px] rounded-2xl border border-darkOlive/20 overflow-hidden cursor-pointer">
+    <article className="min-h-[233px] rounded-2xl border border-darkOlive/20 overflow-hidden cursor-pointer group">
       <Link
         href={`/quest/${props.id}`}
-        className="relative flex items-end w-full h-full py-5 px-8"
+        className="relative flex items-end w-full h-full py-5 px-8 "
       >
-        <div className="absolute inset-[-1px] after:absolute after:inset-0 after:bg-cover-pattern">
+        <div className="absolute inset-[-1px] after:absolute after:inset-0 after:bg-cover-pattern group-hover:grayscale transition-all">
           <Image
             alt={props.title}
             src={`/${props.previewImg}`}

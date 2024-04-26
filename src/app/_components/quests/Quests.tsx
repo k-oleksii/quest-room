@@ -1,8 +1,14 @@
 'use client';
 import { useQuests } from '@/app/_util/store/quests';
+import { IQuestCard } from '@/app/_util/types';
+import { FC } from 'react';
 import Card from '../card/Card';
 
-const Quests = ({ data }) => {
+interface IQuest {
+  data: IQuestCard[];
+}
+
+const Quests: FC<IQuest> = ({ data }) => {
   const { filterType } = useQuests();
 
   const filterData = data.filter(item => {
