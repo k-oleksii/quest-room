@@ -10,16 +10,26 @@ const config: Config = {
     colors: {
       golden: '#fec432',
       orange: '#f2890f',
+      lightGray: '#d9d9d9',
       silver: '#a6a6a6',
       silverGray: '#e6e6e6',
+      darkGray: '#535353',
       grayishSilver: '#c6c4c2',
       white: '#ffffff',
+      charcoal: '#615e5c',
+      black: '#000000',
+      darkOlive: '#514321',
+      purple: '#8a43ff',
     },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      backgroundImage: theme => ({
+        'header-pattern':
+          'linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 60%)',
+        'cover-pattern':
+          'linear-gradient(0deg, #1c1b1b 5%, rgba(252, 186, 3, 0) 99%)',
+      }),
+      maxWidth: {
+        container: '1080px',
       },
     },
   },
