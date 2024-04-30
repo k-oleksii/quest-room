@@ -27,9 +27,15 @@ const config: Config = {
           'linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 60%)',
         'cover-pattern':
           'linear-gradient(0deg, #1c1b1b 5%, rgba(252, 186, 3, 0) 99%)',
+        'cover-inner-pattern':
+          'radial-gradient(circle, rgba(0,0,0,0.04) 48%, rgba(0,0,0,0.76) 91%)',
       }),
+      boxShadow: {
+        btn: 'inset -1px -1px 52px -16px rgba(255, 255, 255, 0.3)',
+      },
       maxWidth: {
         container: '1080px',
+        containerInner: '1178px',
       },
     },
   },

@@ -27,14 +27,16 @@ const Card: FC<IQuestCard> = props => {
           <h2 className="font-bold text-2xl text-white">{props.title}</h2>
           <div className="flex items-center">
             <div className="flex gap-x-2 items-center pr-3.5 border-r border-r-white/50">
-              <span className="text-white">{getIcon(ICONS.person)}</span>
+              <span className="text-white h-4">{getIcon(ICONS.person)}</span>
 
               <span className="font-medium text-white/80 text-[13px]">
                 {props.peopleCount[0]}-{props.peopleCount[1]} осіб
               </span>
             </div>
             <div className="flex gap-x-2 items-center pl-3.5">
-              <span className="text-white">{getIcon(ICONS.puzzle)}</span>
+              <span className="block text-white h-4">
+                {getIcon(ICONS.puzzle)}
+              </span>
               <span className="font-medium text-white/80 text-[13px]">
                 {props.level}
               </span>

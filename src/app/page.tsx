@@ -18,9 +18,9 @@ export default async function Home() {
 
   return (
     <>
-      <Cover />
+      <Cover alt="Ігри у Львові" src="/main-bg.jpg" />
       <div className="relative z-10 flex">
-        <div className="container mx-auto">
+        <div className="w-full max-w-container mx-auto">
           <span className="font-medium text-sm text-orange">Ігри у Львові</span>
           <h1 className="font-extrabold text-[64px] text-white">
             В яку гру зіграємо?
