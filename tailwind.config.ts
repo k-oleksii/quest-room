@@ -16,6 +16,7 @@ const config: Config = {
       darkGray: '#535353',
       grayishSilver: '#c6c4c2',
       white: '#ffffff',
+      red: '#ff3535',
       charcoal: '#615e5c',
       black: '#000000',
       darkOlive: '#514321',
@@ -25,6 +26,7 @@ const config: Config = {
       backgroundImage: theme => ({
         'header-pattern':
           'linear-gradient(to bottom, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0) 60%)',
+        'form-pattern': 'linear-gradient(to bottom, #141414 0%, #1f1d1d 100%)',
         'cover-pattern':
           'linear-gradient(0deg, #1c1b1b 5%, rgba(252, 186, 3, 0) 99%)',
         'cover-inner-pattern':

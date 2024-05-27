@@ -1,20 +1,11 @@
+import { getQuests } from '@/actions/quests';
 import Cover from './_components/cover/Cover';
 import Filter from './_components/filter/Filter';
 import AllQuests from './_components/quests/Quests';
 import { FILTERS } from './_util/constants/filter';
 
-async function questsFetch() {
-  const response = await fetch('http://localhost:3001/quests', {
-    method: 'GET',
-  });
-  if (!response.ok) {
-    throw new Error('Failed to fetch data');
-  }
-  return response.json();
-}
-
 export default async function Home() {
-  const data = await questsFetch();
+  const data = await getQuests();
 
   return (
     <>

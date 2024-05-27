@@ -14,7 +14,7 @@ const Card: FC<IQuestCard> = props => {
       >
         <div className="absolute inset-[-1px] after:absolute after:inset-0 after:bg-cover-pattern group-hover:grayscale transition-all">
           <Image
-            alt={props.title}
+            alt={props.title || 'Quest Image'}
             src={`/${props.previewImg}`}
             width={400}
             height={300}

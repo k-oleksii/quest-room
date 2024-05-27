@@ -15,3 +15,10 @@ export interface IFilterItem {
   icon: string;
   type: string;
 }
+
+export interface IFormData {
+  name: string;
+  phone: string;
+  peopleCount: number;
+  isLegal: boolean;
+}

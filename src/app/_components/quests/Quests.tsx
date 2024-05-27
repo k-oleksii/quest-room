@@ -16,7 +16,7 @@ const Quests: FC<IQuest> = ({ data }) => {
 
     return item.type === filterType;
   });
-
+  console.log('Quests data:', data);
   return (
     <div className="grid grid-cols-3 gap-6 w-full">
       {filterData.map(item => (

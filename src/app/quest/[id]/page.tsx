@@ -1,3 +1,4 @@
+import { getQuestByID } from '@/actions/quests';
 import Button from '@/app/_components/button/Button';
 import Cover from '@/app/_components/cover/Cover';
 import { getIcon } from '@/app/_util/helper/getIcon';
@@ -12,19 +13,8 @@ interface IParams {
   id: string;
 }
 
-async function questFetch({ params }: { params: IParams }) {
-  const response = await fetch(`http://localhost:3001/quests/${params.id}`, {
-    method: 'GET',
-  });
-  if (!response.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return response.json();
-}
-
 const Quest = async ({ params }: { params: IParams }) => {
-  const data = await questFetch({ params });
+  const data = await getQuestByID(params.id);
 
   metadata.title = data?.title;
   metadata.description = data?.description;
@@ -67,7 +57,7 @@ const Quest = async ({ params }: { params: IParams }) => {
               </p>
             </div>
 
-            <Button type="button" text="Взяти участь" />
+            <Button href={`${params.id}/order`} text="Взяти участь" />
           </div>
         </div>
       </div>
