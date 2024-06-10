@@ -6,7 +6,7 @@ import Navigation from '../navigation/Navigation';
 
 const Header: FC = () => {
   return (
-    <div className="sticky top-0 z-10 py-4 px-8 bg-header-pattern">
+    <div className="sticky top-0 z-50 py-4 px-8 bg-header-pattern">
       <div className="flex justify-between items-center gap-x-2">
         <Logo />
         <Navigation routes={routes} />

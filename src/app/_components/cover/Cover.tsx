@@ -15,7 +15,7 @@ const Cover: FC<ICover> = props => {
       }`}
     >
       <Image
-        alt={props.alt}
+        alt={props.alt || 'Cover Image'}
         src={props.src}
         fill
         sizes="100vw"
